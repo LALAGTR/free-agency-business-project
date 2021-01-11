@@ -1,0 +1,738 @@
+$redHover: #de2b24
+$yellowHover: #f8cd53
+
+$bgOurApproch: #f3f3f3
+$bgOurWork: #de2b24
+$bgOurWorkCard: #f35e59
+$bgFreeAnalysis: #1287bf
+$bgGetInTouch: #2a2a2a
+
+/*Общие настройки*/
+*
+	box-sizing: border-box
+	margin: 0
+	font-family: 'Roboto Condensed', sans-serif
+
+/*Контейнер*/
+.container
+	max-width: 1024px
+	width: 100%
+	margin: 0 auto
+
+/*Бургер*/
+.toggle
+	display: none
+
+/*Шапка*/
+.header
+	position: fixed
+	background-color: #fff
+	width: 100%
+	z-index: 100
+
+.menu
+	justify-content: space-between
+	align-items: center
+	display: flex
+	padding: 20px 0 20px 0
+
+.logo
+	max-width: 245px
+	width: 100%
+	display: flex
+	line-height: 100%
+	margin-right: 17.08%
+
+	p
+		padding-top: 10
+
+	&__image
+		max-width: 75px
+		width: 100%
+		height: auto
+		margin-right: 12px
+
+	&__title
+		font-size: 37px
+		font-weight: bold
+
+.navigation-menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	list-style-type: none
+
+	&__item
+		font-size: 15px
+		text-decoration: none
+		color: #000
+		font-weight: 600
+		transition: .2s
+		margin-left: 18px
+
+		&:hover
+			color: $redHover
+	
+	&__button
+		padding: 12px 23px
+		background-color: #de2b24
+		color: #fff
+		border-radius: 4px
+		display: inline-block
+		vertical-align: middle
+
+		&:hover
+			background-color: $yellowHover
+			color: #fff	
+
+/*Главная секция*/
+.main-block
+	background-image: url('../blocks/main/images/background-image.png')
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 754px
+	background-attachment: fixed
+	width: 100%
+	color: #fff
+	text-align: center
+	display: flex
+	align-items: center
+
+	&__title
+		font-size: 48px
+		margin: 0
+	
+	&__subtitle
+		font-size: 30px
+
+	&__button
+		margin-top: 38px
+		border: 0
+		padding: 25px  40px
+		background-color: #f8cd53
+		color: #fff
+		font-size: 24px;   
+		text-transform: uppercase
+		font-weight: 600
+		border-radius: 7px
+		transition: .3s
+		cursor: pointer
+
+		&:hover
+			background-color: $redHover
+
+/*Титульное название для всех блоков*/
+.title-blocks
+	font-size: 36px
+	font-weight: 500
+	margin: 0
+
+.subtitle-blocks
+	font-size: 20px
+	margin-top: 12px
+
+	&::after, &_white-theme::after
+		content: ''
+		display: block
+		height: 6px
+		width: 48px
+		background-color: #424242
+		margin: 0 auto
+		margin-top: 18px
+		margin-bottom: 48px
+	
+	&_white-theme::after
+		background-color: #fff
+
+/*About Us секция*/
+.about-us
+	text-align: center
+	padding-top: 104px
+	padding-bottom: 122px
+
+	&__content
+		display: flex
+		justify-content: space-around
+	
+	&-content__card
+		display: flex;
+		flex-direction: column
+		text-align: center
+		max-width: 260px
+		width: 100%
+	
+	&-card
+		&__image
+			display: block
+			width: 88px
+			height: 88px
+			margin: 0 auto
+		
+		&__title
+			font-size: 22px
+			margin-top: 30px
+			margin-bottom: 20px
+
+/*Our Approch секция*/
+.our-approch
+	background-color: $bgOurApproch
+	padding-top: 92px
+	padding-bottom: 134px
+	text-align: center
+
+.approch
+	&__content
+		display: flex
+		flex-direction: column
+	
+	&-content__card
+		display: flex
+		justify-content: start
+		position: relative
+		text-align: left
+		margin-bottom: 40px
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+		max-width: 1000px
+		width: 100%
+
+	&-card
+		&__image
+			max-width: 34%
+			width: 100%
+		
+		&__number
+			position: absolute
+			left: 28%
+			top: 0
+			bottom: 0
+			margin: auto 0
+			width: 11.5%
+			height: 44%
+			background-color: $redHover
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			color: #fff
+			border-radius: 3px
+			box-shadow: 0 0 0 3px #fff
+		
+		&__description
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-left: 7%
+
+		&-description__title
+			margin: 0
+			font-size: 18px
+			font-weight: 600
+			
+		&-description__content
+			font-size: 13px
+	
+	&-num__description
+		font-size: 50px
+		margin-bottom: -5px
+
+/*Our Work секция*/
+.our-work
+	background-color: $bgOurWork
+	padding-top: 112px
+	padding-bottom: 128px
+	text-align: center
+	color: #fff
+
+.work
+	&__content
+		max-width: 100%
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	
+	&-content__card
+		display: flex
+		flex-direction: column
+		max-width: 256px
+		width: 100%
+		align-items: center
+		justify-content: center
+		overflow: hidden
+		background-color: $bgOurWorkCard
+	
+	&-card
+		&__title
+			margin: 0
+			margin-top: 25px
+			margin-bottom: 10px
+			font-size: 26px
+			font-weight: 600	
+
+		&__subtitle
+			margin: 0
+			font-size: 16px
+		
+		&__image
+			transform: scale(1.1)
+
+/*Free analysis секция*/
+.free-analysis
+	background-color: $bgFreeAnalysis
+	padding-top: 100px
+	padding-bottom: 100px
+	text-align: center
+	color: #fff
+
+.analysis
+	&__title
+		margin: 0
+		font-weight: 600
+		font-size: 36px
+	
+	&__subtitle
+		margin: 0
+		margin-top: 10px
+		margin-bottom: 20px
+		font-size: 20px
+	
+	&__button
+		margin: 0 auto
+		padding: 0
+		cursor: pointer
+		transition: .5s
+		transform: rotate(0deg)
+
+		&--active
+			transform: rotate(180deg);
+
+.client
+	&-block
+		display: none
+		max-width: 683px
+		width: 100%
+		background-color: #fff
+		color: #828282
+		margin: 0 auto
+		margin-top: 50px
+		padding: 50px
+		border-radius: 7px
+		transition: .4s
+
+		&--active
+			display: block
+		
+		&__description
+			font-size: 15px
+			margin-left: 66px
+			margin-right: 66px
+	
+	&-form
+		display: flex
+		flex-direction: column
+		margin-top: 42px
+
+		&__input
+			max-width: 446px
+			width: 100%
+			height: 50px
+			margin: 0 auto
+			margin-bottom: 15px
+			border-radius: 7px
+			border-color: #d8d8d8
+
+			&:focus
+				border-color: #1287bf
+   				box-shadow: 0 0 0 2px rgba(18, 135, 191, 0.4)
+		
+		&__button
+			max-width: 146px
+			width: 100%
+			height: 46px
+			border: 0
+			background-color: #de2b24
+			margin-top: 35px
+			color: #fff
+			font-size: 15px
+			text-transform: uppercase
+			font-weight: 600
+			margin: 0 auto
+			margin-bottom: 40px
+			transition: .3s
+
+			&:hover
+				box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3)
+				background-color: #b81f19
+
+/*Get in touch секция */
+.get-in-touch
+	background-color: $bgGetInTouch
+	padding-top: 88px
+	padding-bottom: 80px
+	text-align: center
+	color: #fff
+
+	&__title
+		margin: 0
+		margin-bottom: 30px
+		font-weight: 600
+		font-size: 29px
+
+	&__subtitle
+		font-size: 15px
+		color: #bebebe
+		margin-top: 38px
+		margin-bottom: 34px
+
+.social
+	&-container
+		display: flex
+		justify-content: center
+		align-items: center
+	
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		color: #fff
+		border: solid 2px #515151
+		font-size: 25px
+		width: 50px
+		height: 50px
+		margin-right: 15px
+		transition: .3s
+
+		&:hover
+			 border-color: $redHover
+
+.subscribe-form
+	display: flex
+	flex-direction: column
+
+	&__input
+		margin: 0 auto
+		height: 55px
+		max-width: 683px
+		width: 100%
+		background-color: #515151
+		color: #fff
+	
+	&__button
+		margin: 0 auto
+		max-width: 150px
+		width: 100%
+		height: 50px
+		margin-top: 25px
+		margin-bottom: 84px
+		background-color: #2a2a2a
+		border: solid 3px #515151
+		font-size: 17px
+		color: #fff 
+		transition: .3s
+
+		&:hover
+			border-color: $redHover
+			color: $redHover
+
+/*Подвал и контакты*/
+.footer
+	&-block
+		background-color: #515151
+		color: #fff
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center	
+	
+	&__title
+		margin: 0
+		margin-bottom: 20px
+
+.contacts-block
+	margin-top: 10px
+	margin-bottom: 30px
+	width: 100%
+	text-align: center
+
+.phone-text, .email-text
+	text-decoration: none
+	font-size: 16px
+	color: #1287bf
+
+.icon__phone-text, .icon__email-text
+	font-size: 20px
+	margin-left: 46px
+	margin-right: 12px
+
+@media (max-width: 1000px)
+	.container
+		width: 94%
+		margin: 0 auto
+
+	.toggle
+		display: flex
+		height: 50px
+		width: 50px
+		background-color: $redHover
+		border-radius: 50%
+		cursor: pointer
+		align-items: center
+		justify-content: center
+		position: relative
+
+		&__icon
+			&, &::after, &::before
+				background-color: #fff
+				position: absolute
+				width: 20px
+				height: 2px
+				left: 50%
+				top: 50%
+				margin-left: -10px
+				margin-top: -1px
+		
+			&::after, &::before
+				content: ""
+				display: block
+				transition: .2s
+
+			&::before
+				transform: translateY(-6px)
+
+			&::after
+				transform: translateY(6px)
+
+			&_active::before
+				transform: rotate(45deg)
+
+			&_active::after
+				transform: rotate(-45deg)
+		
+		span.toggle__icon_active
+			height: 0
+
+	.contacts-block
+		text-align: center
+	
+	.phone-text
+		margin-left: 0
+	
+	.email-text
+		margin-left: 5px
+	
+	.navigation
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		height: 0%
+		background-color: rgba(82, 82, 82, 0.8); 
+		transition: all .3s
+		overflow: hidden
+
+		&_active
+			height: 250%
+
+		&-menu
+			margin: 0 auto
+			flex-direction: column
+			justify-content: space-around
+			padding: 0
+			height: 100%
+
+			&__item
+				color: #fff
+
+	.approch-num__description
+		font-size: 30px
+
+@media (max-width: 600px)
+	.logo
+		font-size: 15px
+
+		&__image
+			width: 42px
+			height: 25px
+		
+		& p
+			padding: 0
+		
+		&__title
+			font-size: 24px
+
+	.menu
+		padding: 10px 0 10px 0
+
+	.toggle
+		height: 40px
+		width: 40px
+
+		&__icon
+			&, &::after, &::before
+				height: 1.5px
+	
+	.main-block
+		min-height: 400px
+		background-attachment: initial
+
+		&__title
+			font-size: 30px
+		
+		&__subtitle
+			font-size: 18px
+
+		&__button
+			font-size: 15px
+			padding: 10px 20px
+			border-radius: 4px
+			margin-top: 15px
+
+	.about-us, .our-approch
+		padding-top: 40px
+		padding-bottom: 35px
+	
+	.title-blocks
+		font-size: 30px
+
+	.subtitle-blocks
+		font-size: 15px
+		margin-top: 5px
+
+		&::after, &_white-theme::after
+			margin-top: 8px
+			margin-bottom: 30px
+	
+	.about-us
+		&-content__card
+			padding: 8px
+		
+		&-card__image
+			height: 50px
+			width: 45px
+
+		&-card__title
+			font-size: 18px
+
+		&-content__card p
+			font-size: 14px
+
+	/*Our approch*/
+	.approch
+		&-content__card
+			display: table-cell
+			width: 100%
+		
+		&-card
+			&__image
+				margin-right: 10px
+				float: left
+				width: 34%
+				min-width: 190px
+				min-height: 135px
+			
+			&__description
+				text-align: justify
+				margin: 15px
+			
+			&__number
+				width: 70px
+				height: 70px
+				margin: 0
+				left: 0
+				box-shadow: 0 0 0 0px
+				border-radius: 0
+		
+			&-description__title
+				font-size: 16px
+				text-align: left
+				margin-bottom: 10px
+				
+		&-num__description
+			font-size: 25px
+	
+	/*Our work*/
+	.our-work
+		padding: 40px 0
+		
+	.work
+		&-content__card
+			max-width: 150px
+			width: 100%
+			max-height: 150px
+			
+		&-card
+			&__title
+				font-size: 20px
+				
+			&__subtitle
+				font-size: 13px
+			
+			&__image
+				transform: scale(0.6)
+	
+	/*Free analysis*/
+	.free-analysis
+		padding: 40px 0
+		
+	.analysis
+		&__title
+			font-size: 28px
+
+		&__subtitle
+			font-size: 20px
+
+		&__button
+			width: 50px
+			height: 50px
+	
+	.client
+		&-block
+			margin-top: 20px
+			padding-top: 20px
+		
+		&-form__button
+			margin-bottom: 15px
+
+	/*Get in touch секция*/
+	.get-in-touch
+		padding: 40px 0
+
+		&__subtitle
+			margin: 15px 0
+		
+		&__title
+			font-size: 30px
+	
+	.subscribe-form
+		&__button
+			margin-bottom: 0
+			width: 100px
+			height: 35px
+			margin-top: 15px
+			font-size: 15px
+		
+		&__input
+			height: 35px
+
+	.social__item
+		height: 35px
+		width: 35px
+	
+	.fab
+		font-size: 18px
+
+	.contacts-block
+		display: flex
+		justify-content: flex-start
+		flex-direction: column
+	
+	.phone-text
+		margin-bottom: 10px
+	
+	.icon
+		&__phone-text, &__email-text
+			margin: 0
+			margin-right: 10px
+		&__email-text
+			margin-left: 25px
+	
